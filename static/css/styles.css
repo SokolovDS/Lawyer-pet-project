@@ -19,3 +19,8 @@
     width: 400px;
 @include make-col();
 }
+
+.center-block {
+    display: table;
+    margin: auto;
+}

@@ -13,10 +13,10 @@ class Subscriber(Model):
     -phone
     """
     name = CharField(max_length=64)
-    surname = CharField(max_length=64)
-    patronymic = CharField(max_length=64)
+    surname = CharField(max_length=64, null=True)
+    patronymic = CharField(max_length=64, null=True)
     email = EmailField()
-    phone = CharField(max_length=64)
+    phone = CharField(max_length=64, null=True)
 
     def __str__(self):
         return "id: {}, email: {}".format(self.id, self.email)

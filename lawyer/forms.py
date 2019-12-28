@@ -5,4 +5,4 @@ from lawyer.models import Subscriber
 class SubscriberForm(ModelForm):
     class Meta:
         model = Subscriber
-        exclude = [""]
+        fields = ["name", "email"]

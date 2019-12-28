@@ -17,6 +17,6 @@ from django.urls import path
 from lawyer import views
 
 urlpatterns = [
-    path('index/', views.index),
-    path('', views.coming)
+    path('', views.index),
+    path('coming/', views.coming)
 ]

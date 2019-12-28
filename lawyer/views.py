@@ -9,14 +9,7 @@ import time
 
 
 def index(request):
-    name = "Daniil"
-    currentDay = time.ctime(time.time())
-    form = SubscriberForm(request.POST or None)
-
-    if request.method == "POST" and form.is_valid():
-        form.save()
-
-    return render(request, 'index.html', locals())
+    return render(request, 'lawyer/index.html', locals())
 
 
 def coming(request):
@@ -27,4 +20,4 @@ def coming(request):
     if request.method == "POST" and form.is_valid():
         form.save()
 
-    return render(request, 'coming.html', locals())
+    return render(request, 'lawyer/coming.html', locals())

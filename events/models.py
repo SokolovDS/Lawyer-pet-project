@@ -4,8 +4,7 @@ from django.conf import settings
 
 from django.db import models
 
-
-# Create your models here.
+from services.models import Service
 
 
 # Create your models here.
@@ -27,3 +26,11 @@ class Event(Model):
 
     def __str__(self):
         return "Id клиента: {}, Id юриста: {}".format(self.client_id, self.person_id)
+
+
+class ServicesInEvent(Model):
+    """
+    Услуги в обращении
+    """
+    event_id = models.ForeignKey(Event, on_delete=models.CASCADE)
+    service_id = models.ForeignKey(Service, on_delete=models.CASCADE)

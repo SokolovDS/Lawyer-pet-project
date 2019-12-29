@@ -28,11 +28,17 @@
 <div class="wrapper" style="background-color: #efefef">
     {% include 'header.html' %}
     <main>
-        {% block content %}
+        <div class="container main-container">
+            <div class="row">
+                <div class="col">
+                    {% block content %}
 
-            <!-- MAIN CONTENT HERE -->
+                        <!-- MAIN CONTENT HERE -->
 
-        {% endblock %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
     </main>
 
     {% include 'footer.html' %}

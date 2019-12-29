@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/event/styles.css' %}">
+
+    {% for service in service_list %}
+        <a>Name: {{ service.name }}</a><br>
+        <a>Description: {{ service.description }}</a><br>
+        <a>MinPrice: {{ service.min_price }}</a><br>
+    {% endfor %}
+{% endblock %}

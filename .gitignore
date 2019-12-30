@@ -1,0 +1,8 @@
+# VirtualEnvironment
+env/
+
+#PycharmFiles
+.idea/
+
+#Database
+db.sqlite3

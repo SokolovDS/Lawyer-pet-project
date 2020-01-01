@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="{% static 'css/event/styles.css' %}">
 
     {% for service in service_list %}
-        <a>Name: {{ service.name }}</a><br>
+        <a>url: {{ service.get_absolute_url }}</a><br>
+        <a href="{{ service.get_absolute_url }}">Name: {{ service.name }}</a><br>
         <a>Description: {{ service.description }}</a><br>
         <a>MinPrice: {{ service.min_price }}</a><br>
     {% endfor %}

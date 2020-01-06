@@ -1,6 +1,6 @@
 from django.contrib.admin import site, ModelAdmin
 
-from lawyer.models import Subscriber
+from main.models import Subscriber
 
 
 class SubscriberAdmin(ModelAdmin):

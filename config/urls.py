@@ -20,7 +20,7 @@ admin.autodiscover()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('lawyer.urls')),
+    path('', include('main.urls')),
     path('services/', include('services.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

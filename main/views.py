@@ -9,7 +9,7 @@ import time
 
 
 def index(request):
-    return render(request, 'lawyer/index.html', locals())
+    return render(request, 'main/index.html', locals())
 
 
 def coming(request):
@@ -20,4 +20,4 @@ def coming(request):
     if request.method == "POST" and form.is_valid():
         form.save()
 
-    return render(request, 'lawyer/coming.html', locals())
+    return render(request, 'main/coming.html', locals())

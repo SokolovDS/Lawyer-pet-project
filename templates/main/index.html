@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/event/styles.css' %}">
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+        <p><a href="/accounts/logout">Log out</a>.</p>
+    {% else %}
+        <p>Welcome, new user. Please <a href="accounts/login">log in</a>.</p>
+    {% endif %}
+    <a>asda</a>
+{% endblock %}

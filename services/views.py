@@ -13,6 +13,12 @@ class ServiceListView(generic.ListView):
 class ServiceDetailView(generic.DetailView):
     model = Service
 
-# def service_list(request):
-#     service_list = Service.objects.filter()
-#     return render(request, 'services/service_list.html', locals())
+
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from django.conf import settings
+
+
+def send_email(request):
+    result = send_mail('Тема', 'Тело письма', settings.EMAIL_HOST_USER, ['danya.sokolov98@gmail.com'])
+    return result

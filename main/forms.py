@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from lawyer.models import Subscriber
+from main.models import Subscriber
 
 
 class SubscriberForm(ModelForm):

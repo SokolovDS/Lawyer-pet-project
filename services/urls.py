@@ -19,4 +19,5 @@ from services import views
 urlpatterns = [
     path('', views.ServiceListView.as_view(), name='services'),
     path('<int:pk>/', views.ServiceDetailView.as_view(), name='service_detail'),
+    path('test/', views.send_email, name='test')
 ]

@@ -1,5 +1,4 @@
 from django.db.models import Model, CharField, EmailField, TextField, DecimalField
-from django.db import models
 from django.urls import reverse
 
 

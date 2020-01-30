@@ -2,8 +2,6 @@
 {% load static %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static 'css/event/styles.css' %}">
-
     {% for service in service_list %}
         <a>url: {{ service.get_absolute_url }}</a><br>
         <a href="{{ service.get_absolute_url }}">Name: {{ service.name }}</a><br>

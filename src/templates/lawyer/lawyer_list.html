@@ -2,13 +2,22 @@
 {% load static %}
 
 {% block content %}
-    {% for lawyer in lawyer_list %}
-        <a href="{{ lawyer.get_absolute_url }}">url: {{ lawyer.get_absolute_url }}</a><br>
-        <a>Фамилия: {{ lawyer.user.last_name }} Имя: {{ lawyer.user.first_name }}</a><br>
-        Рейтинг: {{ lawyer.rating }}<br>
-        Описание: {{ lawyer.description }}<br>
-        Photo: <img src="{{ lawyer.photo }}"><br>
-        Количество обращений:<br>
-        Ответов на вопросы:<br>
-    {% endfor %}
+	{% for lawyer in lawyer_list %}
+		<div class="container">
+			<div class="row lawyer-container">
+				<div class="col-4">
+					<img src="{{ lawyer.photo.url }}" class="img-fluid"><br>
+				</div>
+				<div class="col-8">
+					<a href="{{ lawyer.get_absolute_url }}">url: {{ lawyer.get_absolute_url }}</a><br>
+					<a>Фамилия: {{ lawyer.user.last_name }} Имя: {{ lawyer.user.first_name }}</a><br>
+					Рейтинг: {{ lawyer.rating }}<br>
+					Описание: {{ lawyer.description }}<br>
+					Photo: <img src="{{ lawyer.photo }}"><br>
+					Количество обращений:<br>
+					Ответов на вопросы:<br>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
 {% endblock %}

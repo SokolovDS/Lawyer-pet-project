@@ -5,4 +5,7 @@ env/
 .idea/
 
 #Database
-db.sqlite3
+/src/db.sqlite3
+
+/src/secret.py
+/venv/

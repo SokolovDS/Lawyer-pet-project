@@ -23,9 +23,11 @@ class Event(Model):
         on_delete=models.CASCADE,
         related_name='person_id'
     )
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return "Id клиента: {}, Id юриста: {}".format(self.client_id, self.person_id)
+        return "Заказ {}. Id клиента: {}, Id юриста: {}".format(self.id, self.client_id, self.person_id)
 
 
 class ServicesInEvent(Model):

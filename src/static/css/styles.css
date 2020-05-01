@@ -9,13 +9,8 @@ body {
 
 .wrapper {
     min-height: 100vh;
-}
-
-.content {
-    /* Занять всё оставшееся пространство */
-    flex-grow: 1;
-
-    border: 1px dotted red;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer {
@@ -55,4 +50,8 @@ body {
     font-family: 'Rubik Mono One', sans-serif;
     font-size: 40px;
     /*color: rgb(53, 58, 63)*/
+}
+
+.lawyer-container {
+    border: 1px #dbdbdb;
 }

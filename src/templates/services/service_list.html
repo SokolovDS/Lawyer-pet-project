@@ -2,10 +2,19 @@
 {% load static %}
 
 {% block content %}
-    {% for service in service_list %}
-        <a>url: {{ service.get_absolute_url }}</a><br>
-        <a href="{{ service.get_absolute_url }}">Name: {{ service.name }}</a><br>
-        <a>Description: {{ service.description }}</a><br>
-        <a>MinPrice: {{ service.min_price }}</a><br>
-    {% endfor %}
+	{% for service in service_list %}
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<a>a</a>
+				</div>
+				<div class="col">
+					<a>url: {{ service.get_absolute_url }}</a><br>
+					<a href="{{ service.get_absolute_url }}">Name: {{ service.name }}</a><br>
+					<a>Description: {{ service.description }}</a><br>
+					<a>MinPrice: {{ service.min_price }}</a><br>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
 {% endblock %}
